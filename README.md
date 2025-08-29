@@ -20,14 +20,14 @@ Tech Stack
 
 My File Structure : 
 
-moodgarden/
+moodgarden/ -->
   front/
     index.html
     style.css
-    app.js
+    app.js     |    
   back/
     server.js
-    moodgarden.db
+    moodgarden.db   |   
   moodgarden.db
   package.json
   package-lock.json
