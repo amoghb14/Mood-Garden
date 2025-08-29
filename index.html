@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div id="authOverlay">
+
+    <form id="loginForm" class="auth-form">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Email" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit">Login</button>
+      <p class="toggle-link" id="showRegister">Don't have an account? Register</p>
+    </form>
+  
+    <form id="registerForm" class="auth-form hidden">
+      <h2>Register</h2>
+      <input type="email" id="registerEmail" placeholder="Email" required>
+      <input type="password" id="registerPassword" placeholder="Password" required>
+      <button type="submit">Register</button>
+      <p class="toggle-link" id="showLogin">Already have an account? Login</p>
+    </form>
+  </div>
+  
+  <div id="app" class="hidden">
+
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div id="appContainer" style="display:none">
+    <nav class="menu-bar">
+        <ul class="menu-tabs">
+          <li><a href="#" id="aiBtn">AI Companion</a></li>
+          <li><a href="#my-journal">My Journal</a></li>
+        </ul>
+      </nav>      
+
+
+      <div id="chatModal" class="modal">
+    <div class="modal-content">
+      <span id="closeChat" class="close">&times;</span>
+      <h2> AI Companion</h2>
+      
+      <div id="chatBox" class="chat-box"></div>
+      
+      <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type a message..." />
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  </div>
+
+<div id="journalModal" class="journal-modal">
+    <div class="journal-modal-content">
+      <span class="journal-close-btn" id="closeJournalBtn">&times;</span>
+      <h2>My Journal</h2>
+  
+      <textarea id="journalEntry" placeholder="Write your thoughts here..."></textarea>
+      <button id="saveJournalEntryBtn" class="journal-btn">Save Entry</button>
+  
+      <h3>Previous Entries</h3>
+      <div id="journalList"></div>
+    </div>
+  </div>
+  
+
+  
+    
+    <h1 id="head"> ☀️ MOOD GARDEN </h1>
+    <h2 id="hi"> Welcome Back! </h2>
+    <h2 id="dat"> Today's Date : MM/DD/YYYY </h2>
+<div id="moood">
+    <p id="feel"> How are you feeling today? (1-10) </p>
+
+    <input
+    type="range"
+    id="slider"
+    name="cowbell"
+    min="1"
+    max="10"
+    value="1"
+    step="1" />
+    <label for="cowbell"></label>
+    <p id="value">1</p> 
+    
+    <button id="save-mood"> Save </button>
+</div>
+    <h2 id="garden"> Your Garden : </h2>
+
+
+
+
+
+
+
+    <div id="gard">
+
+        <div class="garden-container">
+    <div class="garden-tabs">
+      <button class="tab-btn active" data-tab="normal">Normal</button>
+      <button class="tab-btn" data-tab="legendary" id="legend">Legendary</button>
+    </div>
+  
+    <div class="garden-grid" id="normal">
+      <div class="plant-card locked" data-plant="Marigold" data-progress="3/5" id="mari">
+        <h3>Marigold</h3>
+        <p>20 Mood Ratings 7+</p>
+        <div class="progress-bar" id="mar"><div></div></div>
+      </div>
+  
+      <div class="plant-card locked" data-plant="Dahlia" data-progress="10/10" id="dahl">
+        <h3>Dahlia</h3>
+        <p>5 Perfect Mood Ratings (10)</p>
+        <div class="progress-bar" id="dah"><div></div></div>
+      </div>
+  
+      <div class="plant-card locked" data-plant="Tulip" data-progress="23/50" id="tully">
+        <h3>Tulip</h3>
+        <p>50 Journal Entries</p>
+        <div class="progress-bar" id="tul"><div></div></div>
+      </div>
+  
+      <div class="plant-card locked" data-plant="Hyacinth" data-progress="7/10" id="hyac">
+        <h3>Hyacinth</h3>
+        <p>10 Mood Ratings 8+</p>
+        <div class="progress-bar" id="hya"><div></div></div>
+      </div>
+  
+      <div class="plant-card locked" data-plant="Hibiscus" data-progress="12/30" id="Hibby">
+        <h3>Hibiscus</h3>
+        <p>25 Journal Entries</p>
+        <div class="progress-bar" id="hib"><div></div></div>
+      </div>
+  
+      <div class="plant-card locked" data-plant="Rose" data-progress="65/100" id="ros">
+        <h3>Rose</h3>
+        <p>50 Journal Entries & 10 Days Mood ≥ 8</p>
+        <div class="progress-bar" id="ro"><div></div></div>
+      </div>
+    </div>
+  
+    <div class="garden-grid hidden" id="legendary">
+      <div class="plant-card locked" data-plant="Lotus" data-progress="0/20" id="llot">
+        <h3>Lotus</h3>
+        <p>75 Days with Mood Rating 8+</p>
+        <div class="progress-bar" id="leg"><div></div></div>
+      </div>
+
+      <div class="plant-card locked" data-plant="Azalea" data-progress="0/20" id="aaza">
+        <h3>Azalea</h3>
+        <p>75 Journal Entries</p>
+        <div class="progress-bar" id="leg"><div></div></div>
+      </div>
+
+      <div class="plant-card locked" data-plant="Lily" data-progress="0/20" id="llil">
+        <h3>Lily</h3>
+        <p>Unlock All Normal Plants</p>
+        <div class="progress-bar" id="leg"><div></div></div>
+      </div>
+
+      <div class="plant-card locked" data-plant="Jasemine" data-progress="0/20" id="jjas">
+        <h3>Jasemine</h3>
+        <p>100 Days with Mood Rating 10</p>
+        <div class="progress-bar" id="leg"><div></div></div>
+      </div>
+
+      <div class="plant-card locked" data-plant="Carnation" data-progress="0/20" id="ccar">
+        <h3>Carnation</h3>
+        <p>150 Days with Mood Rating 9+</p>
+        <div class="progress-bar" id="leg"><div></div></div>
+      </div>
+
+      <div class="plant-card locked" data-plant="Tulip" data-progress="0/20" id="gtul">
+        <h3>Golden Tulip</h3>
+        <p>200 Journal Entries</p>
+        <div class="progress-bar" id="leg"><div></div></div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+  
+    </div>
+
+
+
+
+
+    
+
+    <div id="history">
+        <h2>Your Mood History : </h2>
+        <canvas id="moodChart"></canvas>
+    </div>
+    </div>
+
+
+
+</body>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

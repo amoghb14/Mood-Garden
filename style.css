@@ -1,0 +1,428 @@
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(215, 249, 227);
+    justify-content: center;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: bolder;
+    color: #5d4037;
+}
+
+#feel{
+    font-size: 25px;
+}
+
+#moood{
+    margin-top: 40px;
+    font-weight: bolder;
+}
+
+#ai{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #FCE38A;
+    border-color: forestgreen;
+    box-shadow: 3px 3px 3px;
+}
+
+#slider{
+    -webkit-appearance: none;
+    cursor: pointer;
+    background: linear-gradient(to right, red, rgb(255, 225, 0), rgb(0, 255, 0));;
+    width: 200px;
+    height: 10px;
+    border-radius: 20px;
+}
+
+#value{
+    font-size: 20px;
+    font-weight: bolder;
+    color: forestgreen;
+}
+
+h2{
+    color: #104113;
+}
+
+/*menu-bar*/
+.menu-bar {
+    background-color: #2c3e50;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 16%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+.menu-tabs {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+.menu-tabs a {
+    display: block;
+    padding: 15px 20px;
+    color: #ecf0f1;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+.menu-tabs a:hover {
+    background-color: #5d54af;
+  }
+
+#head{
+    margin-top: 20px;
+}
+
+
+
+#garden{
+    margin-top: 40px;
+}
+
+#save-mood{
+    background-color: #1e3925;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 12px;
+    border-color: black;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#save-mood:hover{
+    background-color: #0e1b12;
+}
+
+#history{
+    width: 900px; 
+    height: 600px;
+    margin-left: 270px;
+    margin-top: 60px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center; align-items: center;
+    z-index: 1000;
+  }
+  
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 400px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.close {
+    cursor: pointer;
+    font-size: 20px;
+    float: right;
+  }
+  
+.chat-box {
+    flex: 1;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    background: #fafafa;
+  }
+  
+.message {
+    margin: 5px 0;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  
+.user { background: #c3e6cb; float: right; clear: both; }
+.assistant { background: #e2e3e5; float: left; clear: both; }
+  
+.chat-input {
+    display: flex;
+  }
+  
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px 0 0 8px;
+  }
+  
+.chat-input button {
+    padding: 8px 12px;
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+/* Journal Modal */
+.journal-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000; /* Higher than AI companion if needed */
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+  
+  .journal-modal-content {
+    background: #fff;
+    width: 420px;
+    max-height: 80vh;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-y: auto;
+  }
+  
+  .journal-close-btn {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #journalEntry {
+    width: 90%;
+    height: 100px;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+  }
+  
+  .journal-btn {
+    display: inline-block;
+    margin: 5px 0 15px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  .journal-btn:hover {
+    background: #45a049;
+  }
+
+  .journalEntries{
+    margin-top: 100px;
+  }
+
+
+
+
+
+
+
+#gard{
+    background-color: rgb(226, 255, 225);
+    width: 80%;
+    height: 400px;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    border-radius: 50px;
+    margin-left: 140px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.garden-container {
+    text-align: center;
+  }
+  
+  .garden-tabs {
+    margin: 10px 0;
+  }
+  
+  .tab-btn {
+    padding: 8px 16px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #0a3d2e;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  
+  .tab-btn.active {
+    background: #072c21;
+  }
+  
+  .garden-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .plant-card {
+    background: #194d1e;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .plant-card.locked {
+    background: #b6ffbe;
+    filter: grayscale(70%);
+    cursor: not-allowed;
+    color: black;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .plant-card:hover::after {
+    content: "Click on me to view flower";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .progress-bar {
+    margin-top: 10px;
+    height: 10px;
+    background: linear-gradient(to right, #a8e063, #56ab2f);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar div {
+    height: 100%;
+    background: #32cd32;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+  }
+  .hidden {
+    display: none;
+  }
+  
+
+
+
+  
+
+
+  /* Fullscreen overlay */
+#authOverlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* ensures it covers the app */
+  }
+  
+  /* Forms */
+  .auth-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    min-width: 300px;
+    text-align: center;
+  }
+  
+  .auth-form h2 {
+    margin-bottom: 0.5rem;
+    color: #2e7d32;
+  }
+  
+  .auth-form input {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+  }
+  
+  .auth-form button {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .auth-form button:hover {
+    background: #1b5e20;
+  }
+  
+  .toggle-link {
+    color: #2e7d32;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .hidden { display: none; }
+  
+
+  #leg{
+    background: #1b2631;
+  }
+
+  #appContainer{
+    text-align: center;
+  }
