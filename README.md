@@ -11,6 +11,26 @@ Features
 - AI Companion : Talk to an AI-therapist get guidance and emotional support
 
 Tech Stack
-- **Frontend**: HTML, CSS, JavaScript  
-- **Backend**: Node.js + Express  
-- **Database**: SQLite3  
+- **Frontend**: HTML, CSS, JavaScript  (files : index.html, style.css, app.js)
+- **Backend**: Node.js + Express  (files : server.js)
+- **Database**: SQLite3  (files : moodgarden.db)
+- (There are additiona json packages which were required in my environment)
+
+- **The application runs in localhost in the port 8080**
+
+My File Structure : 
+
+moodgarden/
+  front/
+    index.html
+    style.css
+    app.js
+  back/
+    server.js
+    moodgarden.db
+  moodgarden.db
+  package.json
+  package-lock.json
+  
+  
+
