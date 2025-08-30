@@ -20,9 +20,9 @@ Tech Stack
 
 My File Structure : 
 
-moodgarden/ --> (two folders : back & front  |  3 files : package.json, package-lock.json, moodgarden.db)
-      back/ server.js, moodgarden.db
-      front/ index.html  style.css  app.js
+- moodgarden/ --> (two folders : back & front  |  3 files : package.json, package-lock.json, moodgarden.db)
+- back/ server.js, moodgarden.db
+- front/ index.html  style.css  app.js
     
   
 
