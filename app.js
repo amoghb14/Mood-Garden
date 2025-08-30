@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
           loadMoodsAndDrawChart();
 
           const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-          alert("🌱 Welcome back! Here's your positive thought:\n\n" + randomQuote);      
+          alert("Welcome back! Here's your positive thought:\n\n" + randomQuote);      
         } else {
           alert("X " + data.error);
         }
       } catch (err) {
-        alert("⚠️ Server error. Make sure backend is running.");
+        alert("err.");
       }
     });
   
@@ -87,14 +87,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = await res.json();
   
         if (data.userId) {
-          alert("✅ Registration successful! You can log in now.");
+          alert("Registration successful! You can log in now.");
           document.getElementById("registerForm").classList.add("hidden");
           document.getElementById("loginForm").classList.remove("hidden");
         } else {
           alert("X" + data.error);
         }
       } catch (err) {
-        alert("⚠️ Server error. Make sure backend is running.");
+        alert("err");
       }
     });
   
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Mood saved:", data);
         loadMoodsAndDrawChart();
       } else {
-        alert("❌ " + data.error);
+        alert("X" + data.error);
       }
 
       if(mood <= 6){
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
   
         const ct = res.headers.get("content-type") || "";
-        let reply = "⚠️ No response";
+        let reply = "No response";
   
         if (ct.includes("application/json")) {
           const data = await res.json();
@@ -281,7 +281,7 @@ document.addEventListener("DOMContentLoaded", () => {
         messages.push({ role: "assistant", content: reply });
       } catch (err) {
         console.error("API Error:", err);
-        addMessage("assistant", "⚠️ Could not connect to AI.");
+        addMessage("assistant", "Could not connect to AI.");
       }
     });
   
