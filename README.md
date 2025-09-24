@@ -14,7 +14,7 @@ Tech Stack
 - **Frontend**: HTML, CSS, JavaScript  (files : index.html, style.css, app.js)
 - **Backend**: Node.js + Express  (files : server.js)
 - **Database**: SQLite3  (files : moodgarden.db)
-- (There are additiona json packages which were required in my environment)
+- (There are additional json packages which were required in my environment)
 
 - **The application runs in localhost in the port 8080**
 
